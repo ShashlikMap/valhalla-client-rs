@@ -221,8 +221,8 @@ pub mod blocking {
         ///
         /// let response = Valhalla::default().route(manifest).unwrap();
         /// # use valhalla_client::matrix::Response;
-        /// # assert!(response.warnings.is_none());
-        /// # assert_eq!(response.locations.len(), 2);
+        /// # assert!(response.0.warnings.is_none());
+        /// # assert_eq!(response.0.locations.len(), 2);
         /// ```
         pub fn route(
             &self,
@@ -414,8 +414,8 @@ impl Valhalla {
     ///   .language("de-De");
     ///
     /// let response = Valhalla::default().route(manifest).await.unwrap();
-    /// # assert!(response.warnings.is_none());
-    /// # assert_eq!(response.locations.len(), 2);
+    /// # assert!(response.0.warnings.is_none());
+    /// # assert_eq!(response.0.locations.len(), 2);
     /// # }
     /// ```
     pub async fn route(
